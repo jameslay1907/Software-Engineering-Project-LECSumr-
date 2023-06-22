@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css')}}">
+    <title>Sign Up</title>
+</head>
+<body>
+    <header>
+        <div class = "navbar">
+
+            <h1>LecSumr</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('main') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <a href="{{ url_for('login') }}" class="tombol">Login</a>
+                    <a href="{{ url_for('subscription') }}" class="tombol1">SignUp</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <div class = "signup">
+        <h2>SIGN UP</h2>
+        <form action="{{url_for('signup')}}" method = "post">
+        {% if mesage is defined and mesage %}
+			        <div class="alert alert-warning">{{ mesage }}</div>
+		    {% endif %}
+            <br>
+            <label for="name">Name</label><br><br>
+			<input type="text" id="name" name="name" placeholder="Enter name" name="name"><br><br>
+            <label for="email">Email</label><br><br>
+            <input type="email" id="email" name="email" placeholder="Enter email" name = "email"><br><br>
+            <label for="pwd">Password</label><br><br>
+            <input type="password" id="password" name="password" placeholder="Enter password" name = "pswd"><br><br>
+            <input type="submit" class = "button" value="Sign Up">
+        </form>
+        <h5>OR</h5>
+        <div class="logo">
+            <a href="#">
+                <img src="{{ url_for('static', filename='1298745_google_brand_branding_logo_network_icon.png')}}" alt="Google Button">
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='1298738_facebook_brand_fb_logo_social media_icon.png')}}" alt="Facebook Button">
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='4373121_logo_logos_microsoft_icon.png')}}" alt="Microsoft Button">
+            </a>
+        </div>
+        <p>Already a user? <a href="{{ url_for('login')}}">Login here</a></p>
+    </div>
+</body>
+</html>

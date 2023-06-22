@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class = "navbar">
+
+            <h1>LecSumr</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('main2') }}">Home</a></li>
+                    <li><a href="{{ url_for('about2') }}">About</a></li>
+                    <a href="{{ url_for('account') }}" class="tombol">Account</a>
+                    <a href="{{ url_for('logout') }}" class="tombol1">Logout</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="home">
+        <div class = "combo">
+            <h2>Lecture Transcript Summarizer</h2>
+            <a href="{{ url_for('team') }}">Import Your File</a>
+        </div>
+        <img src="{{ url_for('static', filename = 'video-to-text-banner.png')}}" alt="Gambar Video To Text">
+    </div>
+    <div class = "sumrStep">
+        <h2>Summarization Steps</h2>
+    <div class = "box">
+        <div class = "sumrStep1">
+            <img src="{{ url_for('static', filename = 'upload.jpg')}}" alt="Upload Photo">
+            <h3>Upload</h3>
+            <p>Upload the files of your transcript as a .txt file</p>
+        </div>
+        <div class = "sumrStep2">
+            <img src="{{ url_for('static', filename = 'waiting.jpeg')}}" alt="Wait Photo">
+            <h3>Wait</h3>
+            <p>The summarization process takes a while</p>
+        </div>
+        <div class = "sumrStep3">
+            <img src="{{ url_for('static', filename = 'result.jpg')}}" alt="Result Photo">
+            <h3>Result</h3>
+            <p>Your summary is ready. You can download it as a .txt file</p>
+        </div>
+    </div>
+    </div>
+    <div class="ads">
+        <img src="{{ url_for('static', filename = 'ads.jpg')}}" alt="Advertisement">
+    </div>
+    <div class = "testimoni-box">
+        <div class = "testimoni">
+            <h2>Testimonials</h2>
+            <div class = "image">
+                <img src="{{ url_for('static', filename = 'testimoni.png')}}" alt="Gambar Testimoni">
+            </div>
+            <div class = "text">
+                <div class = "text1">
+                    <p>“Aplikasinya berfungsi dengan baik dan dapat mencatat hal-hal penting dari video”</p>
+                    <h4>Budi</h4>
+                </div>
+                <div class = "text2">
+                    <p>“Hasilnya lumayan cepat selesai dan transkripsinya mudah untuk dibaca”</p>
+                    <h4>Siti</h4>
+                </div>
+                <div class = "text3">
+                    <p>“Aplikasi ini sangat membantu untuk orang-orang yang tidak memiliki waktu untuk menonton video dan hanya ingin mengetahui apa yang dibicarakan”</p>
+                    <h4>Hugo</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+        <div class = "box1">
+            <div class = "phone">
+                <h4>Phone</h4>
+                <p>(021) 1234567</p>
+                <h4>Whatsapp</h4>
+                <p>+62 12-345-678-987</p>
+            </div>
+            <div class = "email">
+                <h4>Email</h4>
+                <p>lecsumr@gmail.com</p>
+            </div>
+            <div class = "logo">
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

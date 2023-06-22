@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/subscription.css') }}">
+    <title>Subscription</title>
+</head>
+<body>
+    <header>
+        <div class = "navbar">
+
+            <h1>LecSumr</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('main') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <a href="{{ url_for('login') }}" class="tombol">Login</a>
+                    <a href="{{ url_for('subscription') }}" class="tombol1">SignUp</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class = "blank"></div>
+    <div class = "subscription">
+        <div class="free">
+            <h2>Free Subscription</h2>
+            <ul>
+                <li>Upload Size Limited</li>
+                <li>Cannot Summarize in Bulk</li>
+                <li>Personal Storage of 10 GB</li>
+                <li>Duration Max of 100 Minutes</li>
+            </ul>
+        </div>
+        <h3>VS</h3>
+        <div class = "paid">
+            <h2>Paid Subscription</h2>
+            <ul>
+                <li>Upload Size Unlimited</li>
+                <li>Summarize in Bulk</li>
+                <li>Personal Storage of 150 GB</li>
+                <li>Unlimited Duration Max</li>
+            </ul>
+        </div>
+    </div>
+    <div class = "button">
+        <a href="{{ url_for('signup') }}" class="tombol">Sign Up</a>
+        <a href="{{ url_for('signup2') }}" class="tombol1">Sign Up</a>
+    </div>
+</body>
+</html>

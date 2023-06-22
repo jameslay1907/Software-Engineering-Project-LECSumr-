@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/account.css')}}">
+    <title>Account</title>
+</head>
+<body>
+    <header>
+        <div class = "navbar">
+
+            <h1>LecSumr</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('main2') }}">Home</a></li>
+                    <li><a href="{{ url_for('about2') }}">About</a></li>
+                    <a href="{{ url_for('account') }}" class="tombol">Account</a>
+                    <a href="{{ url_for('logout') }}" class="tombol1">Logout</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <div class = "profile">
+        <h2>User Profile</h2>
+        <img src="{{ url_for('static', filename='accountlogo.png') }}" alt="User Profile Logo">
+        <p>Welcome, <strong>{{session.name}}</strong></p><!-- name -->
+        <p>Name: {{session.email}}</p> <!-- email -->
+        <p>Type: {{session.plan}}</p> <!-- type of subscription -->
+    </div>
+</body>
+</html>

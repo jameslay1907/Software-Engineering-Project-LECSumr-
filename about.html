@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css' )}}">
+    <title>About</title>
+</head>
+<body>
+    <header>
+        <div class = "navbar">
+
+            <h1>LecSumr</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('main') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <a href="{{ url_for('login') }}" class="tombol">Login</a>
+                    <a href="{{ url_for('subscription') }}" class="tombol1">SignUp</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <h2>About</h2>
+    <div class = "history">
+        <h3>History</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut massa erat. Duis mi eros, fermentum vel mollis non, pellentesque vel nibh. Vestibulum rhoncus urna sed tempus facilisis. Quisque sit amet ante eget ligula eleifend hendrerit. Nam bibendum suscipit sem, eu consequat metus rutrum nec. Donec ac ex nisl. Nam ligula nunc, feugiat a rhoncus quis, venenatis sed augue. Aliquam ultricies tortor sit amet nulla placerat aliquet. Pellentesque semper neque orci, ut aliquam tortor faucibus quis. Nulla bibendum libero nec interdum convallis. Suspendisse et dolor eget risus finibus lobortis in id purus. Cras eget ipsum sed augue eleifend convallis.</p>
+    </div>
+    <div class = "goals">
+        <h3>Goals</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut massa erat. Duis mi eros, fermentum vel mollis non, pellentesque vel nibh. Vestibulum rhoncus urna sed tempus facilisis. Quisque sit amet ante eget ligula eleifend hendrerit. Nam bibendum suscipit sem, eu consequat metus rutrum nec. Donec ac ex nisl. Nam ligula nunc, feugiat a rhoncus quis, venenatis sed augue. Aliquam ultricies tortor sit amet nulla placerat aliquet. Pellentesque semper neque orci, ut aliquam tortor faucibus quis. Nulla bibendum libero nec interdum convallis. Suspendisse et dolor eget risus finibus lobortis in id purus. Cras eget ipsum sed augue eleifend convallis.</p>
+    </div>
+    <br>
+    <div class = "footer">
+        <div class = "box1">
+            <div class = "phone">
+                <h4>Phone</h4>
+                <p>(021) 1234567</p>
+                <h4>Whatsapp</h4>
+                <p>+62 12-345-678-987</p>
+            </div>
+            <div class = "email">
+                <h4>Email</h4>
+                <p>lecsumr@gmail.com</p>
+            </div>
+            <div class = "logo">
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

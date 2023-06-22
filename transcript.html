@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transcript.css') }}">
+    <title>Transcript</title>
+</head>
+<body>
+    <header>
+        <div class = "navbar">
+
+            <h1>LecSumr</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('main2') }}">Home</a></li>
+                    <li><a href="{{ url_for('about2') }}">About</a></li>
+                    <a href="{{ url_for('account') }}" class="tombol">Account</a>
+                    <a href="{{ url_for('logout') }}" class="tombol1">Logout</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <h2>Transcript</h2>
+    <br>
+    {% if message is defined and message %}
+			        <div class="warning">{{ message }}</div>
+		{% endif %}
+    <br>
+    <div class = "transcript">
+        <img src="{{ url_for('static', filename='transcriptads1.png') }}" alt="Advertisement 1">
+        <form action="/", method="post", enctype="multipart/form-data">
+            <label for="myfile">Select a file: </label><br><br>
+            <input type="file" id="videofile", name="videofile"><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <img src="{{ url_for('static', filename='transcriptads2.png') }}" alt="Advertisement 2">
+    </div>
+</body>
+</html>
